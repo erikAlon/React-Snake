@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { render } from 'react-dom';
-import reducers from './reducers';
-import './styles/index.css';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <Game />
-  </Provider>
-  , 
-  document.getElementById('root')
-);
+import { Game, Board } from './components';
+import reducers from './reducers';
+
+import game from './game.json';
+
+const store = createStore(reducers, Object.assign({}, game.defaults, {
+  board: new Board(game.board.stageWidth / game.board.tileSize, game.board.stageHeight / game.board.tileSize)
+}));
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Provider store={store}>
+        <Game />
+      </Provider>
+    );
+  }
+}
+
+render(<App />, document.getElementById('root'));
