@@ -6,9 +6,6 @@
     "food": "#fff",
     "snakeBody": "#C02",
     "snakeHead": "#E00",
-<<<<<<< HEAD
-    "mainMenu": "#000"
-=======
     "mainMenu": "#000",
     "mainMenuText": "#fff",
     "playButton": "blue"
@@ -24,7 +21,6 @@
     "titleSize": 30,
     "topScoreSize": 15,
     "playSize": 35
->>>>>>> upstream/master
   },
   "board": {
     "stageWidth": 300,
