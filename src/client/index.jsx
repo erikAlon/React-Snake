@@ -1,6 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-
+import reducers from './reducers';
 import './styles/index.css';
 
-render(<div><p>Hello World</p></div>, document.getElementById('root'));
+render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <Game />
+  </Provider>
+  , 
+  document.getElementById('root')
+);
