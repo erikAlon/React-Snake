@@ -5,11 +5,7 @@ export const SET_TOP_SCORE = 'SET_TOP_SCORE';
 export const SET_STAGE = 'SET_STAGE';
 export const GAME_OVER = 'GAME_OVER';
 export const SET_FOOD_NEEDED = 'SET_FOOD_NEEDED';
-<<<<<<< HEAD
-export const SET_STAGE = 'SET_STAGE';
-=======
 export const SET_TOP_TEXT = 'SET_TOP_TEXT';
->>>>>>> upstream/master
 
 export const setDirection = (direction) => {
   return {
@@ -63,9 +59,6 @@ export const setStage = (stage) => {
     type: SET_STAGE,
     payload: stage
   }
-<<<<<<< HEAD
-}
-=======
 }
 
 export const setTopText = (text) => {
@@ -76,4 +69,3 @@ export const setTopText = (text) => {
 }
 
 
->>>>>>> upstream/master

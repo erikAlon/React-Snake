@@ -70,30 +70,6 @@ class Game extends Component {
 
   handleKeyPress(event) {
     switch (event.key) {
-<<<<<<< HEAD
-    case 'w':
-    case 'ArrowUp':
-      this.props.setDirection('up');
-      break;
-    case 's':
-    case 'ArrowDown':
-      this.props.setDirection('down');
-      break;
-    case 'a':
-    case 'ArrowLeft':
-      this.props.setDirection('left');
-      break;
-    case 'd':
-    case 'ArrowRight':
-      this.props.setDirection('right');
-      break;
-    case 'Enter':
-    case 'Space':
-        //this.start();
-      break;
-    default:
-      break;
-=======
       case 'w':
       case 'ArrowUp':
         this.props.setDirection('up');
@@ -116,7 +92,6 @@ class Game extends Component {
         break;
       default:
         break;
->>>>>>> upstream/master
     }
   }
 
@@ -139,16 +114,6 @@ class Game extends Component {
     loop();
   }
 
-<<<<<<< HEAD
-  componentDidMount() {
-    window.addEventListener('keydown', this.handleKeyPress);
-    // random food color? Konva.Util.getRandomColor()
-    this.generateFood();
-    this.start();
-  }
-
-=======
->>>>>>> upstream/master
   render() {
     return (
       <Stage width={game.board.stageWidth} height={game.board.stageHeight}>
