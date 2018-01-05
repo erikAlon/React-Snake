@@ -20,15 +20,15 @@ class Game extends Component {
 
   componentWillMount() {
     this.setState({
-      fps: 1000 / 2,
+      fps: 1000 / 3,
       foodX: 15,
       foodY: 15
     });
   }
 
   componentWillUnmount() {
-    clearTimeout(this.loop);
-    window.removeEventListener('keydown', this.handleKeyPress);
+    clearInterval(this.loop);
+    window.removeEventListener("keydown", this.handleKeyPress);
   }
 
   get snake() {
@@ -82,13 +82,21 @@ class Game extends Component {
   }
 
   start() {
-    const loop = () => !this.props.isGameOver ? this.loop = setTimeout(() => {
-      this.snake.update();
-      this.snake.draw();
-      loop();
-    }, this.state.fps) : console.log('Game Over');
-    if (!this.loop)
-      loop();
+    const loop = () => {
+      if (!this.loop) {
+        this.loop = setInterval(() => {
+          if (!this.props.isGameOver) {
+            this.snake.update();
+            this.snake.draw();
+            this.generateFood();
+          } else {
+            console.log('Game Over');
+            clearInterval(this.loop);
+          }
+        }, this.state.fps);
+      }
+    }
+    loop();
   }
 
   componentDidMount() {

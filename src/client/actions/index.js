@@ -3,6 +3,7 @@ export const SET_BOARD = 'SET_BOARD';
 export const SET_SCORE = 'SET_SCORE';
 export const GAME_OVER = 'GAME_OVER';
 export const SET_FOOD_NEEDED = 'SET_FOOD_NEEDED';
+export const SET_STAGE = 'SET_STAGE';
 
 export const setDirection = (direction) => {
   return {
@@ -36,5 +37,12 @@ export const setFoodNeeded = (bool) => {
   return {
     type: SET_FOOD_NEEDED,
     payload: bool
+  }
+}
+
+export const setStage = (stage) => {
+  return {
+    type: SET_STAGE,
+    payload: stage
   }
 }

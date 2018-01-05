@@ -3,7 +3,8 @@
     "board": "#000",
     "food": "#fff",
     "snakeBody": "#C02",
-    "snakeHead": "#E00"
+    "snakeHead": "#E00",
+    "mainMenu": "#000"
   },
   "board": {
     "stageWidth": 300,
@@ -29,6 +30,13 @@
       "gameOver": "Game Over",
       "restart": "Restart",
       "exit": "Main Menu"
+    },
+    "mainWindow": {
+      "height": 300,
+      "width": 300,
+      "titleSize": 30,
+      "topScoreSize": 15,
+      "topScoreWidth": 150
     }
   }
 }
